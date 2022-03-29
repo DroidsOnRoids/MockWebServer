@@ -228,8 +228,8 @@ class MockWebServer {
   }
 
   /// Stop the `MockWebServer`
-  shutdown() {
-    _server.close();
+  Future shutdown() async {
+    await _server.close();
   }
 
   /// Start to listen for and process requests
